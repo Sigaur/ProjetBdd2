@@ -18,7 +18,7 @@
 												CodT VARCHAR(10), 
 												PgDuKm INT, 
 												PgAuKm INT, 
-												Tarif FLOAT)");
+												Tarif DECIMAL(3,3))");
 
 		query_database("INSERT INTO peages VALUES('PAYE PIGEON', 
 												'T3', 
@@ -53,7 +53,7 @@
 		query_database("CREATE TABLE sorties(	CodT VARCHAR(10), 
 												Libelle VARCHAR(100), 
 												Numero INT)");
-		query_database("INSERT INTO sorties VALUES(	2, 
+		query_database("INSERT INTO sorties VALUES(	'T2', 
 												'Rambouillet', 
 												1)");
 	}
@@ -83,10 +83,10 @@
 	function resetVilles()
 	{
 		query_database("DROP TABLE IF EXISTS villes");
-		query_database("CREATE TABLE villes(	Libelle VARCHAR(100), 
-												Numero INT, 
+		query_database("CREATE TABLE villes(	Nom VARCHAR(100),
 												CodP INT, 
-												Nom VARCHAR(100))");
+												Libelle VARCHAR(100), 
+												Numero INT)");
 
 		query_database("INSERT INTO villes VALUES('Rambouillet', 
 												1, 
