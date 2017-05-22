@@ -16,7 +16,6 @@
 	    <th>   </th>
 	  </tr>
 	<?php
-		//require_once('resetDB.php');
 		require_once('controlleur.php');
 		$results_id = retrieve_troncons();
 		while ($row = $results_id->fetch_assoc())
@@ -33,13 +32,14 @@
 	    <th>Code Tronçon</th>
 	    <th>Nom de la sortie</th> 
 	    <th>Numéro de la Sortie</th>
+	    <th>Au Km</th>
 	    <th>   </th>
 	  </tr>	
 	<?php
 		$results_id = retrieve_sorties();
 		while ($row = $results_id->fetch_assoc())
 		{
-			printTableRowSorties($row['CodT'], $row['Libelle'], $row['Numero']);
+			printTableRowSorties($row['CodT'], $row['Libelle'], $row['Numero'], $row['Km']);
 		}
 	?>
 	</table>

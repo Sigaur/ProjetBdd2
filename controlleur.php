@@ -112,12 +112,13 @@ function printTableRowTroncons($CodT, $CodA, $DuKm, $AuKm)
 }
 //class='btn btn-primary btn-block buttonWhite
 
-function printTableRowSorties($CodT, $Libelle, $Numero)
+function printTableRowSorties($CodT, $Libelle, $Numero, $Km)
 {
 	print("<tr>
 	    <td>$CodT</td>
 	    <td>$Libelle</td> 
 	    <td>$Numero</td>
+	    <td>$Km</td>
 	    <td>
 	    	<form action='controlleur.php' method='post'>
 			<input type='hidden' name='sortie' value='$Libelle'>
