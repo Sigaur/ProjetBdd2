@@ -40,9 +40,9 @@
 	function resetSca()
 	{
 		query_database("DROP TABLE IF EXISTS sca");
-		query_database("CREATE TABLE sca(		CodT VARCHAR(10), 
-												CodE VARCHAR(10), 
+		query_database("CREATE TABLE sca(		CodE VARCHAR(10), 
 												Nom VARCHAR(100), 
+												NomPeage VARCHAR(10),
 												CA INT, 
 												DateFin INT)");
 	}
@@ -89,9 +89,9 @@
 												Numero INT)");
 
 		query_database("INSERT INTO villes VALUES('Rambouillet', 
-												1, 
 												65000, 
-												'Rambouillet')");
+												'Rambouillet', 
+												1)");
 	}
 	
 ?>
