@@ -20,7 +20,7 @@
 												PgAuKm INT, 
 												Tarif DECIMAL(3,3))");
 
-		query_database("INSERT INTO peages VALUES('Peage Saint Arnoux', 
+		query_database("INSERT INTO peages VALUES('PAYE PIGEON', 
 												'T3', 
 												0,
 												10,
@@ -52,28 +52,10 @@
 		query_database("DROP TABLE IF EXISTS sorties");
 		query_database("CREATE TABLE sorties(	CodT VARCHAR(10), 
 												Libelle VARCHAR(100), 
-												Numero INT,
-												Km INT)");
-		
-		query_database("INSERT INTO sorties VALUES(	'T1', 
-												'Rambouillet', 
-												1,
-												9)");
-
+												Numero INT)");
 		query_database("INSERT INTO sorties VALUES(	'T2', 
-												'Paris', 
-												2,
-												25)");
-
-		query_database("INSERT INTO sorties VALUES(	'T4', 
-												'Paris', 
-												2,
-												20)");
-
-		query_database("INSERT INTO sorties VALUES(	'T6', 
-												'Marseille', 
-												3,
-												150)");
+												'Rambouillet', 
+												1)");
 	}
 
 	function resetTroncons()
@@ -96,19 +78,6 @@
 												'A10', 
 												0, 
 												40)");
-
-		query_database("INSERT INTO troncons VALUES('T4', 
-												'A7', 
-												0, 
-												40)");
-		query_database("INSERT INTO troncons VALUES('T5', 
-												'A7', 
-												40, 
-												100)");
-		query_database("INSERT INTO troncons VALUES('T6', 
-												'A7', 
-												100, 
-												160)");
 	}
 
 	function resetVilles()
@@ -123,16 +92,6 @@
 												65000, 
 												'Rambouillet', 
 												1)");
-
-		query_database("INSERT INTO villes VALUES('Paris', 
-												75000, 
-												'Paris', 
-												2)");
-
-		query_database("INSERT INTO villes VALUES('Marseille', 
-												13000, 
-												'Marseille', 
-												3)");
 	}
 	
 ?>
