@@ -40,6 +40,12 @@
 			$i ++;
 		}
 
+		if(count($autorouteDepart) == 0)
+		{
+			print("La ville de départ n'est pas connectée au réseau d'autoroutes.");
+			die();
+		}
+
 		$results_id = query_database("SELECT CodA FROM troncons JOIN sorties ON troncons.CodT = sorties.CodT WHERE sorties.libelle = \"$villeArrive\"");
 		 print("<br>");
 		
@@ -49,6 +55,12 @@
 			array_push($autorouteArrive, $row['CodA']);
 			//print("$autorouteArrive[$i] <br>");			
 			$i ++;
+		}
+
+		if(count($autorouteArrive) == 0)
+		{
+			print("La ville d'arrivée n'est pas connectée au réseau d'autoroutes.");
+			die();
 		}
 
 		for($i = 0; $i < count($autorouteDepart); $i++)
