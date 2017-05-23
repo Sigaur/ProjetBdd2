@@ -8,14 +8,12 @@ $Descriptif = $_POST['Descriptif'];
 $DateDebut = $_POST['DateDebut'];
 $DateFin = $_POST['DateFin'];
 
-$query = $projetbdd2->prepare("INSERT INTO registre (CodT, IdRegistre, Descriptif, DateDebut, DateFin) 
-VALUES(:CodT,:IdRegistre,:Descriptif,:DateDebut,:DateFin)");
-$query->execute(array(':CodT' => $CodT, ':IdRegistre' => $IdRegistre, 'Descriptif' =>$Descriptif, ':DateDebut' =>$DateDebut, ':DateFin' => $DateFin));
-$data = $query->fetch();
+query_database("INSERT INTO registre VALUES(\"$CodT\",$IdRegistre, \"$Descriptif\",$DateDebut,$DateFin)");
 
-$projetbdd2->close();
 ?> 
+
 <script text="text/javascript"> 
-alert("Informations ajoutées au registre !"); 
-window.location.replace("index.php"); 
+alert("Registre ajouté !"); 
+window.location.replace("index.php");
+
 </script>
