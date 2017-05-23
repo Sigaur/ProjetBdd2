@@ -5,7 +5,8 @@ session_start();
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<link rel="shortcut icon" type="image/x-icon" href="Ressources/Logo.jpg" />
+<link rel="shortcut icon" type="image/x-icon" href="Logo.png" />
+<style type="text/css">body{background-image:url('sortie.jpg');}</style>
 <link rel ="stylesheet" href= "formulaire.css"/>
 <title>Ajout Sortie</title>
 </head>
