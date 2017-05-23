@@ -178,6 +178,10 @@
 		</div>
 	<br><br>
 
+	<form action="interfaceItineraire.php" method="post">
+		<input type="submit" value="nouvel itineraire">
+	</form>
+
 	Choisissez ce que vous voulez remettre à zéro :
 	<form action="controlleur.php" method="post">
 		<input type="hidden"  name="reset" value="database">
