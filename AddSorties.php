@@ -28,6 +28,10 @@ session_start();
 		
 		<div>
 			<input type="text" required="required" name="Numero" class="id" placeholder="Numéro de la sortie" />
+		</div>
+
+		<div>
+			<input type="text" required="required" name="Km" class="id" placeholder="Sortie au Kilomètre" />
 		</div>	
 			
 		<div class="sub">

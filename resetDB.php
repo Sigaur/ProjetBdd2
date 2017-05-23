@@ -53,7 +53,7 @@
 		query_database("DROP TABLE IF EXISTS sca");
 		query_database("CREATE TABLE sca(		CodE VARCHAR(10), 
 												Nom VARCHAR(100), 
-												NomPeage VARCHAR(10),
+												NomPeage VARCHAR(100),
 												CA INT, 
 												DateFin INT)");
 

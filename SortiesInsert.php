@@ -5,14 +5,14 @@ include("db.php");
 $CodT = $_POST['CodT'];
 $Numero = $_POST['Numero'];
 $Libelle = $_POST['Libelle'];
+$Km = $_POST['Km'];
 
-query_database("INSERT INTO sortie VALUES(\"$CodT\",$Numero,\"$Libelle\")");
-print("INSERT INTO sortie VALUES($CodT,$Numero,\"$Libelle\")");
+query_database("INSERT INTO sorties VALUES(\"$CodT\",\"$Libelle\", $Numero, $Km)");
 
 ?> 
 
 <script text="text/javascript"> 
 alert("Sortie ajoutée !"); 
-//window.location.replace("index.php");
+window.location.replace("index.php");
 
 </script>

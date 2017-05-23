@@ -23,7 +23,7 @@ session_start();
  </div>
  
 <div>
- <input type="text" required="required" name="IdRegistre" class="id" placeholder="Numéro du tronçon enregistré" />
+ <input type="text" required="required" name="IdRegistre" class="id" placeholder="Id du registre" />
  </div>
  
  <div>

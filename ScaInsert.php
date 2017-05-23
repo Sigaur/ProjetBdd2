@@ -8,12 +8,12 @@ $NomPeage = $_POST['NomPeage'];
 $CA = $_POST['CA'];
 $DateFin = $_POST['DateFin'];
 
-query_database("INSERT INTO Sca VALUES($CodE, \"$Nom\",\"$NomPeage\",$CA, $DateFin)");
+query_database("INSERT INTO Sca VALUES(\"$CodE\", \"$Nom\",\"$NomPeage\",$CA, $DateFin)");
 
 ?> 
 
 <script text="text/javascript"> 
-alert("Sortie ajoutée !"); 
+alert("Sca ajoutée !"); 
 window.location.replace("index.php");
 
 </script>
