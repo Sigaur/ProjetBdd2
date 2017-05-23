@@ -81,6 +81,16 @@ body
 	border:0px black solid;
 }
 
+.form-style-1 input[type=submit], .form-style-1 input[type=button]{
+    width:30%;
+    margin:5% 5% 0% 70%;
+    background-color: black;
+    padding: 2% 4% 2% 4%;
+    border:none;
+ 	font-size:2vw;
+    color: white;
+}
+
 .titrecontenu
 {
 	width:58%;
@@ -187,12 +197,12 @@ th{
  }
   
 .sub input[type=submit], .sub input[type=button]{
-    width:38%;
-    margin:6% auto 2% 64%;
+    width:15%;
+    margin:6% auto 2% auto;
     background-color: black;
     border-radius:5px;
     border:black;
-    padding:3%;
+    padding:2px, 2px;
     text-align:center;
     color: white;
     font-family: 'contenu';

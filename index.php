@@ -39,10 +39,11 @@
 	<br><br>
 	<h3 class="titrecontenu"> Sorties </h3>	
 	<div class="Stroll">
-		<div class="milieu">
-		<form action="AddSorties.php" method="post">
+	<div class="milieu">
+			<form action="AddSorties.php" method="post">
 				<input type="submit" value="ajouter">
-			</form>		
+			</form>	
+			
 	<table class="c3">
 	  <tr>
 	    <th>Code Tronçon</th>
@@ -168,9 +169,9 @@
 	
 	<?php
 		$results_id = retrieve_registre();
-		while ($row = $results_id->fetch_assoc())
+		//while ($row = $results_id->fetch_assoc())
 		{
-			printTableRowRegistre($row['CodT'], $row['IdRegistre'], $row['Descriptif'], $row['DateDebut'], $row['DateFin']);
+			//printTableRowRegistre($row['CodT'], $row['IdRegistre'], $row['Descriptif'], $row['DateDebut'], $row['DateFin']);
 		}
 	?>
 	</table>
@@ -178,42 +179,78 @@
 	</div>
 	<br><br>
 
+	
+	
+	
+	
+	<h2 class="titrecontenu">Options </h2>	
+	<div class="Stroll">
+		<div class="milieu">
 
-	<form action="interfaceItineraire.php" method="post">
-		<input type="submit" value="nouvel itineraire">
-	</form>
+	
+		<form action="interfaceItineraire.php" method="post">
+			<input type="submit" value="nouvel itineraire">
+		</form>
+<br>
+	
+	<table>
+	<tr><td>Choisissez ce que vous voulez remettre à zéro :</td></tr>
+	<tr>
+	    <td>
+			<form action="controlleur.php" method="post">
+				<input type="hidden"  name="reset" value="database">
+				<input type="submit" value="Toute la base de données">
+			</form>
+		</td> 
+	    <td>
+			<form action="controlleur.php" method="post">
+				<input type="hidden"  name="reset" value="registre">
+			<input type="submit" value="Le registre">
+			</form>
+		</td>
+	    <td>
+			<form action="controlleur.php" method="post">
+				<input type="hidden"  name="reset" value="registre">
+				<input type="submit" value="Le registre">
+			</form>
+		</td>
+		<td>
+			<form action="controlleur.php" method="post">
+				<input type="hidden"  name="reset" value="sca">
+			<input type="submit" value="Toutes les Sociétées Concessionnaires d'Autoroutes">
+			</form>
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			<form action="controlleur.php" method="post">
+				<input type="hidden"  name="reset" value="sorties">
+				<input type="submit" value="Toutes les sorties">
+			</form>
+		</td>
+		<td>
+			<form action="controlleur.php" method="post">
+				<input type="hidden"  name="reset" value="troncons">
+				<input type="submit" value="Tous les tronçons">
+			</form>
+		</td>
+		<td>
+			<form action="controlleur.php" method="post">
+				<input type="hidden"  name="reset" value="villes">
+				<input type="submit" value="Toutes les villes">
+			</form>
+		</td>
+	</tr>
+	
+	<?php
+		$results_id = retrieve_registre();
+		//while ($row = $results_id->fetch_assoc())
+		{
+			//printTableRowRegistre($row['CodT'], $row['IdRegistre'], $row['Descriptif'], $row['DateDebut'], $row['DateFin']);
+		}
+	?>
+	</table>
+	</div>	
+	</div>
 
-	Choisissez ce que vous voulez remettre à zéro :
-	<form action="controlleur.php" method="post">
-		<input type="hidden"  name="reset" value="database">
-		<input type="submit" value="Toute la base de données">
-	</form>
-	<form action="controlleur.php" method="post">
-		<input type="hidden"  name="reset" value="peages">
-		<input type="submit" value="Tous les Péages">
-	</form>
-	<form action="controlleur.php" method="post">
-		<input type="hidden"  name="reset" value="registre">
-		<input type="submit" value="Le registre">
-	</form>
-	<form action="controlleur.php" method="post">
-		<input type="hidden"  name="reset" value="sca">
-		<input type="submit" value="Toutes les Sociétées Concessionnaires d'Autoroutes">
-	</form>
-	<form action="controlleur.php" method="post">
-		<input type="hidden"  name="reset" value="sorties">
-		<input type="submit" value="Toutes les sorties">
-	</form>
-	<form action="controlleur.php" method="post">
-		<input type="hidden"  name="reset" value="troncons">
-		<input type="submit" value="Tous les tronçons">
-	</form>
-	<form action="controlleur.php" method="post">
-		<input type="hidden"  name="reset" value="villes">
-		<input type="submit" value="Toutes les villes">
-	</form>
-	</trbgcolor="#27E98E">
-	</table
-	</div>
-	</div>
 </body>
