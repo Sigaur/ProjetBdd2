@@ -21,8 +21,7 @@
 	    	<th>Fin du Tronçon</th>
 	    	<th>   </th>
 	  		</tr>
-		</div>	
-		</div>
+		
 
 	
 	<?php
@@ -35,6 +34,8 @@
 		}
 	?>
 	</table>
+	</div>	
+		</div>
 	<br><br>
 	<h3 class="titrecontenu"> Sorties </h3>	
 	<div class="Stroll">
@@ -49,8 +50,7 @@
 	    <th>Numéro de la Sortie</th>
 	    <th>   </th>
 	  </tr>	
-		</div>	
-		</div>
+		
 
 	
 	<?php
@@ -61,6 +61,8 @@
 		}
 	?>
 	</table>
+	</div>	
+		</div>
 	<br><br>
 	<h2 class="titrecontenu"> Villes </h2>	
 	<div class="Stroll">
@@ -76,8 +78,7 @@
 	    <th>Numéro de la sortie</th>
 	    <th>   </th>
 	  </tr>	
-		</div>	
-		</div>
+		
 	
 	<?php
 		$results_id = retrieve_villes();
@@ -87,6 +88,8 @@
 		}
 	?>
 	</table>
+	</div>	
+	</div>
 	<br><br>
 	<h2 class="titrecontenu">Péages </h2>	
 	<div class="Stroll">
@@ -104,8 +107,7 @@
 		<th>Tarif du Péage</th>
 		<th>   </th>
 	  </tr>	
-		</div>	
-		</div>
+		
 	
 	
 	<?php
@@ -116,6 +118,8 @@
 		}
 	?>
 	</table>
+	</div>	
+		</div>
 	<br><br>
 <h2 class="titrecontenu">SCA </h2>	
 	<div class="Stroll">
@@ -132,8 +136,7 @@
 		<th>Durée avant fin de contrat (jours)</th>
 		<th>   </th>
 	  </tr>	
-		</div>	
-		</div>
+		
 	
 	<?php
 		$results_id = retrieve_peages();
@@ -143,6 +146,8 @@
 		}
 	?>
 	</table>
+	</div>	
+		</div>
 	<br><br>
 <h2 class="titrecontenu">Registre Fermetures </h2>	
 	<div class="Stroll">
@@ -159,8 +164,7 @@
 		<th>Date Fin</th>
 		<th>   </th>
 	  </tr>	
-		</div>	
-		</div>
+		
 	
 	<?php
 		$results_id = retrieve_peages();
@@ -170,6 +174,8 @@
 		}
 	?>
 	</table>
+	</div>	
+		</div>
 	<br><br>
 
 	Choisissez ce que vous voulez remettre à zéro :

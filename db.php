@@ -1,7 +1,7 @@
 <?php
 	function query_database($SQLCmd)
 	{
-		$mysqli = new mysqli('localhost', 'root', 'root', 'projetbdd2');
+		$mysqli = new mysqli('localhost', 'efrei', 'efrei123', 'projetbdd2');
 
 		if ($mysqli->connect_errno)
 		{
