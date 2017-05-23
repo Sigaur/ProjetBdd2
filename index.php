@@ -139,7 +139,7 @@
 		
 	
 	<?php
-		$results_id = retrieve_peages();
+		$results_id = retrieve_sca();
 		while ($row = $results_id->fetch_assoc())
 		{
 			printTableRowSca($row['CodE'], $row['Nom'], $row['NomPeage'], $row['CA'], $row['DateFin']);
@@ -167,16 +167,17 @@
 		
 	
 	<?php
-		$results_id = retrieve_peages();
-		while ($row = $results_id->fetch_assoc())
+		$results_id = retrieve_registre();
+		//while ($row = $results_id->fetch_assoc())
 		{
-			printTableRowRegistre($row['CodT'], $row['IdRegistre'], $row['Descriptif'], $row['DateDebut'], $row['DateFin']);
+			//printTableRowRegistre($row['CodT'], $row['IdRegistre'], $row['Descriptif'], $row['DateDebut'], $row['DateFin']);
 		}
 	?>
 	</table>
 	</div>	
-		</div>
+	</div>
 	<br><br>
+
 
 	<form action="interfaceItineraire.php" method="post">
 		<input type="submit" value="nouvel itineraire">

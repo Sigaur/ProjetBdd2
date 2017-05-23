@@ -4,7 +4,7 @@ include("db.php");
 
 $Nom = $_POST['Nom'];
 $CodP = $_POST['CodP'];
-$CodT = $_POST['Libelle'];
+$Libelle = $_POST['Libelle'];
 $Numero = $_POST['Numero'];
 
 query_database("INSERT INTO Villes VALUES(\"$Nom\", $CodP, \"$Libelle\", $Numero)");

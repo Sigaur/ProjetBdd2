@@ -18,7 +18,7 @@
 												CodT VARCHAR(10), 
 												PgDuKm INT, 
 												PgAuKm INT, 
-												Tarif DECIMAL(3,3))");
+												Tarif DECIMAL(5,2))");
 
 		query_database("INSERT INTO peages VALUES('Saint Arnoux', 
 												'T3', 
@@ -35,6 +35,17 @@
 												Descriptif VARCHAR(500), 
 												DateDebut INT, 
 												DateFin INT)");
+
+		query_database("INSERT INTO registre VALUES(	'T1',
+														01,
+														'Travaux en cours', 
+														24022017,
+														10082017)");
+		query_database("INSERT INTO registre VALUES(	'T2',
+														02,
+														'Changement bande centrale', 
+														11112016,
+														18042017)");
 	}
 
 	function resetSca()
@@ -45,6 +56,24 @@
 												NomPeage VARCHAR(10),
 												CA INT, 
 												DateFin INT)");
+
+		query_database("INSERT INTO sca VALUES(	'E1', 
+												'APPR', 
+												'Fleury',
+												1662,
+												01082017)");
+		query_database("INSERT INTO sca VALUES(	'E2', 
+												'ASF', 
+												'Salon',
+												2796,
+												010102017)");
+		query_database("INSERT INTO sca VALUES(	'E3', 
+												'Cofiroute', 
+												'Bordeaux',
+												1306,
+												25052017)");	
+
+
 	}
 
 	function resetSorties()

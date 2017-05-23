@@ -187,6 +187,7 @@ function printTableRowSca($CodE, $Nom, $NomPeage, $CA, $DateFin)
 
 function printTableRowRegistre($CodT, $IdRegistre, $Descriptif, $DateDebut, $DateFin)
 {
+	/*
 	print("<tr>
 	    <td>$CodT</td>
 	    <td>$IdRegistre</td>
@@ -199,6 +200,18 @@ function printTableRowRegistre($CodT, $IdRegistre, $Descriptif, $DateDebut, $Dat
 			<button type='Submit'>Suppr
 			</button>
 			</form>
+		</td>
+	  	</tr>"
+	  	);
+	  	*/
+	print("<tr>
+	    <td></td>
+	    <td></td>
+	    <td></td>
+	    <td></td>
+	    <td></td>
+	    <td>
+	    	
 		</td>
 	  	</tr>"
 	  	);

@@ -76,7 +76,7 @@
 
 	function retrieve_registre()
 	{
-		$SQLCmd = 'SELECT * FROM registre';
+		$SQLCmd = "SELECT * FROM registre";
 		return query_database($SQLCmd);
 	}
 
