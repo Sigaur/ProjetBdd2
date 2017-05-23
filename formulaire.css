@@ -1,28 +1,4 @@
-﻿@font-face
-{
-	
-	font-family:'Menu';
-	src:url("polices/RemachineScript.ttf");
-}
-
-
-@font-face
-{
-	
-	font-family:"titre banniere";
-	src:url("polices/Gameplay.ttf");
-}
-
-
-@font-face
-{
-	
-	font-family: 'contenu';
-	src:url("polices/Sansation.ttf");
-}
-
-
-#header
+﻿#header
 {
 	margin:0;
 	background-color:black;
@@ -34,13 +10,13 @@
 }
 body
 {
-	background-image: url("Ressources/fond.png");
-	background-size:auto auto;
+	width:100%;
+	
+	background-size:100% 100%;
 	width:100%;
 	background-position: center;
 	background-attachment: fixed;
 	margin:0;
-
 }
 
 
@@ -70,38 +46,7 @@ body
 
 }
 
-
-.French
-{
-	/*margin: 10px 10px 0px 0px;*/
-	width:4%;
-	margin:auto ;
-	padding:auto;
-	overflow:hidden;
-	box-shadow: 1px 1px 1px black;
-	overflow:hidden;
-
-}
-.English
-{
-	/*margin: 10px 10px 0px 10px;*/
-	width:4%;
-	margin:auto 2% auto 2% ;
-	padding:auto;
-	overflow:hidden;
-	box-shadow: 1px 1px 1px black;
-	overflow:hidden;
-}
-
-	
-
 /* ------------------------------------ Fin Banniere ------------------------------------*/
-body
-{
-	width:100%;
-	height:100%;
-	
-}
 
 .Stroll
 {		
@@ -109,8 +54,8 @@ body
 	color: black;
 	margin:0% auto 0% auto;
 	box-shadow: 1px 1px 0.6px black;
-	background-color:#10C7E3;
-	opacity:0.9; 
+	background-color:none;
+	opacity:1; 
 
 	
 }
@@ -121,7 +66,7 @@ form
 	margin:auto;
 	padding:2% 2%;
 	border:0px green solid;
-	background-color:rgba(223,223,223,0.9);
+	background-color:rgba(223,223,223,1);
 } 
  
 .title
@@ -202,14 +147,13 @@ a {
 	width:50%;
 	margin:auto auto auto 0%; 
 	padding:2% 2% 2% 5%;
-	font-size:5vw;
+	font-size:2.5vw;
 	
 }	
 
 .Infos a
 {
-	font-family:Menu;
-	color:#FAA701;
+	color:white;
 }
 .Infos a:hover
 {
