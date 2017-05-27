@@ -12,7 +12,7 @@ query_database("INSERT INTO sorties VALUES(\"$CodT\",\"$Libelle\", $Numero, $Km)
 ?> 
 
 <script text="text/javascript"> 
-alert("Sortie ajoutée !"); 
+alert("Sortie ajoutee !"); 
 window.location.replace("index.php");
 
 </script>

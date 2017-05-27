@@ -12,6 +12,6 @@ query_database("INSERT INTO troncons VALUES(\"$CodT\", \"$CodA\", $DuKm, $AuKm)"
 
 ?> 
 <script text="text/javascript"> 
-alert("tronçon ajouté !"); 
+alert("troncon ajoute !"); 
 window.location.replace("index.php"); 
 </script>

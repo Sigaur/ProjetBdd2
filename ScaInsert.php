@@ -13,7 +13,7 @@ query_database("INSERT INTO Sca VALUES(\"$CodE\", \"$Nom\",\"$NomPeage\",$CA, $D
 ?> 
 
 <script text="text/javascript"> 
-alert("Sca ajoutée !"); 
+alert("Sca ajoutee !"); 
 window.location.replace("index.php");
 
 </script>

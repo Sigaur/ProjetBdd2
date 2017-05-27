@@ -13,7 +13,7 @@ query_database("INSERT INTO registre VALUES(\"$CodT\",$IdRegistre, \"$Descriptif
 ?> 
 
 <script text="text/javascript"> 
-alert("Registre ajouté !"); 
+alert("Registre ajoute !"); 
 window.location.replace("index.php");
 
 </script>

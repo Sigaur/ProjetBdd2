@@ -69,55 +69,79 @@ require_once('db.php');
 			window.location.replace("index.php"); 
 			</script>'."\n";
 		}
-		print("<br><br><a href='index.php'>Revenir au Menu Principal</a>");
+		//print("<br><br><a href='index.php'>Revenir au Menu Principal</a>");
 	}
 
 	if (isset($_POST['troncon']))
 	{
 		$temp = $_POST['troncon'];
 		delete_troncon($temp);
-		print("<br>tronçon $temp supprimé");
-		print("<br><br><a href='index.php'>Revenir au Menu Principal</a>");
+		//print("<br>tronçon $temp supprimé");
+		//print("<br><br><a href='index.php'>Revenir au Menu Principal</a>");
+			echo '<script text="text/javascript"> 
+			alert("Troncon supprime!"); 
+			window.location.replace("index.php"); 
+			</script>'."\n";
 	}
 
 	if (isset($_POST['sortie']))
 	{
 		$temp = $_POST['sortie'];
 		delete_sortie($temp);
-		print("<br>Sortie $temp supprimé");
-		print("<br><br><a href='index.php'>Revenir au Menu Principal</a>");
+		//print("<br>Sortie $temp supprimé");
+		//print("<br><br><a href='index.php'>Revenir au Menu Principal</a>");
+			echo '<script text="text/javascript"> 
+			alert("Sortie Supprime!"); 
+			window.location.replace("index.php"); 
+			</script>'."\n";
 	}
 
 	if (isset($_POST['ville']))
 	{
 		$temp = $_POST['ville'];
 		delete_ville($temp);
-		print("<br>Ville $temp supprimée");
-		print("<br><br><a href='index.php'>Revenir au Menu Principal</a>");
+		//print("<br>Ville $temp supprimée");
+		//print("<br><br><a href='index.php'>Revenir au Menu Principal</a>");
+			echo '<script text="text/javascript"> 
+			alert("Ville supprimee!"); 
+			window.location.replace("index.php"); 
+			</script>'."\n";
 	}
 
 	if (isset($_POST['peage']))
 	{
 		$temp = $_POST['peage'];
 		delete_peage($temp);
-		print("<br>Peage $temp supprimé");
-		print("<br><br><a href='index.php'>Revenir au Menu Principal</a>");
+		//print("<br>Peage $temp supprimé");
+		//print("<br><br><a href='index.php'>Revenir au Menu Principal</a>");
+			echo '<script text="text/javascript"> 
+			alert("Peage Supprime !"); 
+			window.location.replace("index.php"); 
+			</script>'."\n";
 	}
 
 	if (isset($_POST['sca']))
 	{
 		$temp = $_POST['sca'];
 		delete_sca($temp);
-		print("<br>Sca $temp supprimé");
-		print("<br><br><a href='index.php'>Revenir au Menu Principal</a>");
+		//print("<br>Sca $temp supprimé");
+		//print("<br><br><a href='index.php'>Revenir au Menu Principal</a>");
+			echo '<script text="text/javascript"> 
+			alert("Sca Supprimee !"); 
+			window.location.replace("index.php"); 
+			</script>'."\n";
 	}
 
 	if (isset($_POST['registre']))
 	{
 		$temp = $_POST['registre'];
 		delete_registre($temp);
-		print("<br>Registre $temp supprimé");
-		print("<br><br><a href='index.php'>Revenir au Menu Principal</a>");
+		//print("<br>Registre $temp supprimé");
+		//print("<br><br><a href='index.php'>Revenir au Menu Principal</a>");
+			echo '<script text="text/javascript"> 
+			alert("Peage Supprime !"); 
+			window.location.replace("index.php"); 
+			</script>'."\n";
 	}
 
 
