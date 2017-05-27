@@ -7,37 +7,67 @@ require_once('db.php');
 		if($_POST['reset'] == 'database')
 		{
 			resetDB();
-			print("Base de données remise à zéro");
+			//print("Base de données remise à zero");
+			echo '<script text="text/javascript"> 
+			alert("Base de donnees remise a zero !"); 
+			window.location.replace("index.php"); 
+			</script>'."\n";
 		}
 		if($_POST['reset'] == 'peages')
 		{
 			resetPeages();
-			print("Péages remis à zéro");
+			//print("Péages remis à zero");
+			/*<script text="text/javascript"> 
+			alert("Peages remis a zero"); 
+			window.location.replace("index.php"); 
+			</script>*/
 		}
 		if($_POST['reset'] == 'registre')
 		{
 			resetRegistre();
-			print("Registre remis à zéro");
+			//print("Registre remis a zero");
+			echo '<script text="text/javascript"> 
+			alert("Registres remis a zero !"); 
+			window.location.replace("index.php"); 
+			</script>'."\n";
 		}
 		if($_POST['reset'] == 'sca')
 		{
-			resetSca();
-			print("Sca remis à zéro");
+			resetSca();	
+			//print("Sca remis à zero");
+			echo '<script text="text/javascript"> 
+			alert("Sca remis a zero !"); 
+			window.location.replace("index.php"); 
+			</script>'."\n";
 		}
+		
 		if($_POST['reset'] == 'sorties')
 		{
 			resetSorties();
-			print("Sorties remises à zéro");
+			//print("Sorties remises à zero");
+			echo '<script text="text/javascript"> 
+			alert("Sorties remises a zero !"); 
+			window.location.replace("index.php"); 
+			</script>'."\n";
 		}
 		if($_POST['reset'] == 'troncons')
 		{
 			resetTroncons();
-			print("Tronçons remis à zéro");
+
+			//print("Tronçons remis à zero");
+			echo '<script text="text/javascript"> 
+			alert("Troncons remis a zero !"); 
+			window.location.replace("index.php"); 
+			</script>'."\n";
 		}
 		if($_POST['reset'] == 'villes')
 		{
 			resetVilles();
-			print("Villes remises à zéro");
+			//print("Villes remises à zero");
+			echo '<script text="text/javascript"> 
+			alert("Villes remises a zero !"); 
+			window.location.replace("index.php"); 
+			</script>'."\n";
 		}
 		print("<br><br><a href='index.php'>Revenir au Menu Principal</a>");
 	}
