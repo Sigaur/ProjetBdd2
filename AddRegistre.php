@@ -40,6 +40,7 @@ session_start();
  
   <div class="sub">
         <input type="submit" value="Enregistrer" />
+		<input type="submit" value="Mettre à jour" />		
   </div>
 </form>
 

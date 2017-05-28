@@ -19,6 +19,7 @@ session_start();
 <form action="TronconsInsert.php"method="post">
 <div>
  <input type="text" required="required" name="CodT" class="id" placeholder="Code du tronçon" />
+ 
  </div>
  
  <div>
@@ -36,6 +37,7 @@ session_start();
 	
   <div class="sub">
         <input type="submit" value="Enregistrer" />
+		<input type="submit" value="Mettre à jour" />
   </div>
 </form>
 </div>

@@ -1,3 +1,21 @@
+	<!DOCTYPE html>
+<html lang="fr">
+<link href="itinerairebis.css" rel="stylesheet"type="text/css">
+<link rel="shortcut icon" type="image/x-icon" href="Logo.png" />
+<style type="text/css">body{background-image:url('trajet.jpg');}</style>
+<body>
+
+	<div class="Section">		
+		<h1 class="titre1">Votre Parcours</h1>
+	</div>
+
+	<div class="Stroll">
+	<div class="sub">
+		<a href="index.php"> 
+			<input type="button" value="Retour" />	
+		</a>
+	</div>
+	<div class="contenu">
 <?php 
 	require_once('db.php');
 
@@ -15,7 +33,7 @@
 
 	function getItineraire($villeDepart, $villeArrive)
 	{
-		print("Itineraire $villeDepart -> $villeArrive : <br>");
+		print("Itineraire $villeDepart -> $villeArrive : <br><br>");
 
 		$tempNode = new Node();
 
@@ -42,7 +60,7 @@
 
 		if(count($autorouteDepart) == 0)
 		{
-			print("La ville de départ n'est pas connectée au réseau d'autoroutes.");
+			print("La ville de depart n'est pas connectee au reseau d'autoroutes.");
 			die();
 		}
 
@@ -59,7 +77,7 @@
 
 		if(count($autorouteArrive) == 0)
 		{
-			print("La ville d'arrivée n'est pas connectée au réseau d'autoroutes.");
+			print("La ville d'arrivee n'est pas connectee au reseau d'autoroutes.");
 			die();
 		}
 
@@ -115,7 +133,7 @@
 			$i ++;
 		}
 
-		print("Pas d'itinéraire trouvés :");
+		print("Pas d'itineraire trouves :");
 		
 
 		/*
@@ -186,3 +204,7 @@
 		*/		
 	}
  ?>
+ 	</div>
+	</div>
+</body>
+</html>

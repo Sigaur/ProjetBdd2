@@ -8,7 +8,7 @@ session_start();
 <link rel="shortcut icon" type="image/x-icon" href="Logo.png" />
 <style type="text/css">body{background-image:url('sca.jpg');}</style>
 <link rel ="stylesheet" href= "formulaire.css"/>
-<title>Ajout Société</title>
+<title>Ajout Societe</title>
 </head>
 
 <body>
@@ -39,6 +39,7 @@ session_start();
  
   <div class="sub">
         <input type="submit" value="Enregistrer" />
+		<input type="submit" value="Mettre à jour" />		
   </div>
 </form>
 
@@ -50,7 +51,6 @@ session_start();
 	</div>
 	</div>
 </footer>
-
 </body>
 
 </html>
