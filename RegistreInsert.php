@@ -8,7 +8,7 @@ $Descriptif = $_POST['Descriptif'];
 $DateDebut = $_POST['DateDebut'];
 $DateFin = $_POST['DateFin'];
 
-query_database("INSERT INTO registre VALUES(\"$CodT\",$IdRegistre, \"$Descriptif\",$DateDebut,$DateFin)");
+query_database("INSERT INTO registre VALUES(\"$CodT\",$IdRegistre, '$Descriptif',$DateDebut,$DateFin)");
 
 ?> 
 

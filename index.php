@@ -169,9 +169,9 @@
 	
 	<?php
 		$results_id = retrieve_registre();
-		//while ($row = $results_id->fetch_assoc())
+		while ($row = $results_id->fetch_assoc())
 		{
-			//printTableRowRegistre($row['CodT'], $row['IdRegistre'], $row['Descriptif'], $row['DateDebut'], $row['DateFin']);
+			printTableRowRegistre($row['CodT'], $row['IdRegistre'], $row['Descriptif'], $row['DateDebut'], $row['DateFin']);
 		}
 	?>
 	</table>
