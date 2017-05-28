@@ -1,4 +1,8 @@
-﻿
+﻿@font-face {
+    font-family: 'titre';
+    src: url('Polices/dodger3.ttf');
+}
+
 .Section 
 {
 	width:70%;
@@ -15,7 +19,8 @@
 	padding:4% 4% 0% 4%;
 	font-size:5vw;
 	border:0px red solid;
-	font-family:"titre banniere";
+	font-family:"titre";
+	text-align:center;
 }
 
 .titre2
@@ -83,4 +88,8 @@ body
     box-shadow:2px;
     -moz-box-shadow:none;
     -webkit-box-shadow:none;
+}
+a
+{
+	text-decoration: none;
 }

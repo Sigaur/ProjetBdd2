@@ -197,3 +197,8 @@ th{
 	background: black;
 }
 
+tr
+{
+	text-align:center;
+	font-size: 1.25vw;
+}

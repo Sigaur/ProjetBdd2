@@ -33,9 +33,6 @@ session_start();
 </div>
 <footer> 
 	<div id="banniere">
-		<div class="Infos">
-			<a href="index.php"> Retour au menu</a>
-	</div>
 	</div>
 </footer>
 

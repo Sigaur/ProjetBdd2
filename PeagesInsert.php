@@ -8,7 +8,7 @@ $PgDuKm = $_POST['PgDuKm'];
 $PgAuKm = $_POST['PgAuKm'];
 $Tarif = $_POST['Tarif'];
 
-query_database("INSERT INTO peages VALUES(\"$Nom\",\"$CodT\", $PgDuKm, $PgAuKm,$Tarif)");
+query_database("INSERT INTO peages VALUES(\"$Nom\",\"$CodT\", $PgDuKm, $PgAuKm, $Tarif)");
 
 ?> 
 

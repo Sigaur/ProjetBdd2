@@ -142,7 +142,7 @@
 				if($autorouteDepart[$i] == $autorouteArrive[$j])
 				{
 					print("$villeDepart -> $autorouteDepart[$i] -> $villeArrive");					
-					print("<br><br><a href='index.php'>Revenir au Menu Principal</a>");
+					//print("<br><br><a href='index.php'>Revenir au Menu Principal</a>");
 					die();
 				}
 			}
@@ -175,7 +175,7 @@
 									if($tempAutoroute = $autorouteArrive[$k])
 									{
 										print("TEST : $villeDepart -> $temp -> $tempVille -> $tempAutoroute -> $villeArrive");
-										print("<br><br><a href='index.php'>Revenir au Menu Principal</a>");
+										//print("<br><br><a href='index.php'>Revenir au Menu Principal</a>");
 										die();
 									}
 								}

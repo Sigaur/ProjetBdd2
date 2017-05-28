@@ -139,7 +139,7 @@ require_once('db.php');
 		//print("<br>Registre $temp supprimé");
 		//print("<br><br><a href='index.php'>Revenir au Menu Principal</a>");
 			echo '<script text="text/javascript"> 
-			alert("Peage Supprime !"); 
+			alert("Registre Supprime !"); 
 			window.location.replace("index.php"); 
 			</script>'."\n";
 	}

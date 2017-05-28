@@ -1,4 +1,9 @@
-﻿#header
+﻿@font-face {
+    font-family: 'titre';
+    src: url('Polices/dodger3.ttf');
+}
+
+#header
 {
 	margin:0;
 	background-color:black;
@@ -76,7 +81,7 @@ form
 	text-align:center;
 	background-color:black;
 	color:white;
- 	font-family:'titre banniere';
+ 	font-family:'titre';
  	font-size:3vw;
  	padding:10% auto 10% auto; 
  }
