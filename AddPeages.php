@@ -13,36 +13,77 @@ session_start();
 
 <body>
 
+<?php
+	if (isset($_POST['update']))
+	{
+		$temp = $_POST['update'];
+		print("<div class=\"Stroll\">
+				<h1 class=\"title\"> Modifier une péage</h1>
+				<form action=\"PeagesInsert.php\"method=\"post\">
+					<div>
+						<input type=\"text\" required=\"required\" name=\"Nom\" class=\"id\" placeholder=\"Nom du péage\" />
+					</div>
+					 
+					<div>
+						<input type=\"text\" required=\"required\" name=\"CodT\" class=\"id\" placeholder=\"Code du tronçon\" />
+					</div>
+					
+					<div>
+						<input type=\"text\" required=\"required\" name=\"PgDuKm\" class=\"id\" placeholder=\"Début de la zone imposée\" />
+					</div>
+					
+					<div>
+						<input type=\"text\" required=\"required\" name=\"PgAuKm\" class=\"id\" placeholder=\"Fin de la zone imposée\" />
+					</div>
+					
+					<div>
+						<input type=\"text\" required=\"required\" name=\"Tarif\" class=\"id\" placeholder=\"Tarif du péage\" />
+					</div>
+						
+					<div class=\"sub\">
+						<input type='hidden' name='update' value='$temp'>
+						<input type=\"submit\" value=\"Enregistrer\" />
+						<input type=\"submit\" value=\"Mettre à jour\" />
 
-<div class="Stroll">
-	<h1 class="title"> Ajouter une péage</h1>
-	<form action="PeagesInsert.php"method="post">
-		<div>
-			<input type="text" required="required" name="Nom" class="id" placeholder="Nom du péage" />
-		</div>
-		 
-		<div>
-			<input type="text" required="required" name="CodT" class="id" placeholder="Code du tronçon" />
-		</div>
-		
-		<div>
-			<input type="text" required="required" name="PgDuKm" class="id" placeholder="Début de la zone imposée" />
-		</div>
-		
-		<div>
-			<input type="text" required="required" name="PgAuKm" class="id" placeholder="Fin de la zone imposée" />
-		</div>
-		
-		<div>
-			<input type="text" required="required" name="Tarif" class="id" placeholder="Tarif du péage" />
-		</div>
 			
-		<div class="sub">
-			<input type="submit" value="Enregistrer" />
-			<input type="submit" value="Mettre à jour" />		
-		</div>
-	</form>
-</div>
+					</div>
+				</form>
+			</div>");
+	}
+	else
+	{
+		print("<div class=\"Stroll\">
+				<h1 class=\"title\"> Ajouter une péage</h1>
+				<form action=\"PeagesInsert.php\"method=\"post\">
+					<div>
+						<input type=\"text\" required=\"required\" name=\"Nom\" class=\"id\" placeholder=\"Nom du péage\" />
+					</div>
+					 
+					<div>
+						<input type=\"text\" required=\"required\" name=\"CodT\" class=\"id\" placeholder=\"Code du tronçon\" />
+					</div>
+					
+					<div>
+						<input type=\"text\" required=\"required\" name=\"PgDuKm\" class=\"id\" placeholder=\"Début de la zone imposée\" />
+					</div>
+					
+					<div>
+						<input type=\"text\" required=\"required\" name=\"PgAuKm\" class=\"id\" placeholder=\"Fin de la zone imposée\" />
+					</div>
+					
+					<div>
+						<input type=\"text\" required=\"required\" name=\"Tarif\" class=\"id\" placeholder=\"Tarif du péage\" />
+					</div>
+						
+					<div class=\"sub\">
+						<input type=\"submit\" value=\"Enregistrer\" />
+						<input type=\"submit\" value=\"Mettre à jour\" />		
+					</div>
+				</form>
+			</div>");
+	}
+?>
+
 <footer> 
 	<div id="banniere">
 		<div class="Infos">

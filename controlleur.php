@@ -156,7 +156,7 @@ function printTableRowTroncons($CodT, $CodA, $DuKm, $AuKm)
 	    <td>$AuKm</td>
 		<td>
 	    	<form action='AddTroncons.php' method='post'>
-			<input type='hidden' name='troncon' value='$CodT'>
+			<input type='hidden' name='update' value='$CodT'>
 			<button type='Submit'>Modifier
 			</button>
 			</form>
@@ -181,7 +181,7 @@ function printTableRowSorties($CodT, $Libelle, $Numero)
 	    <td>$Numero</td>
 		<td>
 	    	<form action='AddSorties.php' method='post'>
-			<input type='hidden' name='sortie' value='$Libelle'>
+			<input type='hidden' name='update' value='$Libelle'>
 			<button type='Submit'>Modifier
 			</button>
 			</form>
@@ -206,14 +206,14 @@ function printTableRowVilles($Nom, $CodP, $Libelle, $Numero)
 	    <td>$Numero</td>
 	    <td>
 	    	<form action='AddVilles.php' method='post'>
-			<input type='hidden' name='ville' value='$CodP'>
+			<input type='hidden' name='update' value='$CodP'>
 			<button type='Submit'>Modifier
 			</button>
 			</form>
 		</td>
 	    <td>
 	    	<form action='controlleur.php' method='post'>
-			<input type='hidden' name='ville' value='$CodP'>
+			<input type='hidden' name='ville' value='$Nom'>
 			<button type='Submit'>Supprimer
 			</button>
 			</form>
@@ -232,7 +232,7 @@ function printTableRowPeages($Nom, $CodT, $PgDuKm, $PgAuKm, $Tarif)
 	    <td>$Tarif</td>
 		<td>
 	    	<form action='AddPeages.php' method='post'>
-			<input type='hidden' name='peage' value='$Nom'>
+			<input type='hidden' name='update' value='$Nom'>
 			<button type='Submit'>Modifier
 			</button>
 			</form>
@@ -258,7 +258,7 @@ function printTableRowSca($CodE, $Nom, $NomPeage, $CA, $DateFin)
 	    <td>$DateFin</td>
 		<td>
 	    	<form action='AddSca.php' method='post'>
-			<input type='hidden' name='sca' value='$CodE'>
+			<input type='hidden' name='update' value='$CodE'>
 			<button type='Submit'>Modifier
 			</button>
 			</form>
@@ -284,7 +284,7 @@ function printTableRowRegistre($CodT, $IdRegistre, $Descriptif, $DateDebut, $Dat
 	    <td>$DateFin</td>
 		<td>
 	    	<form action='AddRegistre.php' method='post'>
-			<input type='hidden' name='registre' value='$IdRegistre'>
+			<input type='hidden' name='update' value='$IdRegistre'>
 			<button type='Submit'>Modifier
 			</button>
 			</form>

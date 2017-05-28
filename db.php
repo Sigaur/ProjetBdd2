@@ -60,7 +60,7 @@
 
 	function delete_peage($Nom)
 	{
-		query_database("DELETE FROM peage WHERE Nom=\"$Nom\"");
+		query_database("DELETE FROM peages WHERE Nom=\"$Nom\"");
 	}
 
 	function retrieve_sca()
