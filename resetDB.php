@@ -15,13 +15,15 @@
 	{		
 		query_database("DROP TABLE IF EXISTS peages");
 		query_database("CREATE TABLE peages(	Nom VARCHAR(100), 
-												CodT VARCHAR(10), 
+												CodT VARCHAR(10),
+												CodE VARCHAR(10),
 												PgDuKm INT, 
 												PgAuKm INT, 
 												Tarif DECIMAL(5,2))");
 
 		query_database("INSERT INTO peages VALUES('Saint Arnoux', 
-												'T3', 
+												'T3',
+												'E1',
 												0,
 												10,
 												12.00)");
@@ -52,24 +54,20 @@
 	{
 		query_database("DROP TABLE IF EXISTS sca");
 		query_database("CREATE TABLE sca(		CodE VARCHAR(10), 
-												Nom VARCHAR(100), 
-												NomPeage VARCHAR(100),
+												Nom VARCHAR(100),
 												CA INT, 
 												DateFin INT)");
 
 		query_database("INSERT INTO sca VALUES(	'E1', 
-												'APPR', 
-												'Fleury',
+												'APPR',
 												1662,
-												01082017)");
+												18082017)");
 		query_database("INSERT INTO sca VALUES(	'E2', 
-												'ASF', 
-												'Salon',
+												'ASF',
 												2796,
-												010102017)");
+												10102017)");
 		query_database("INSERT INTO sca VALUES(	'E3', 
-												'Cofiroute', 
-												'Bordeaux',
+												'Cofiroute',
 												1306,
 												25052017)");	
 
@@ -109,33 +107,40 @@
 	{
 		query_database("DROP TABLE IF EXISTS troncons");
 		query_database("CREATE TABLE troncons(	CodT VARCHAR(10), 
-												CodA VARCHAR(10), 
+												CodA VARCHAR(10),
+												CodE VARCHAR(10),
 												DuKm INT, 
 												AuKm INT)");
 
 		query_database("INSERT INTO troncons VALUES('T1', 
-												'A6', 
+												'A6',
+												'E1', 
 												0, 
 												10)");
 		query_database("INSERT INTO troncons VALUES('T2', 
-												'A6', 
+												'A6',
+												'E1', 
 												10, 
 												25)");
 		query_database("INSERT INTO troncons VALUES('T3', 
-												'A10', 
+												'A10',
+												'E2', 
 												0, 
 												40)");
 
 		query_database("INSERT INTO troncons VALUES('T4', 
- 											'A7', 
+ 											'A7',
+ 											'E3',
  											0, 
  											40)");
  	query_database("INSERT INTO troncons VALUES('T5', 
- 											'A7', 
+ 											'A7',
+ 											'E3', 
  											40, 
  											100)");
  	query_database("INSERT INTO troncons VALUES('T6', 
- 											'A7', 
+ 											'A7',
+ 											'E3', 
  											100, 
 												160)");
 	}

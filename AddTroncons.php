@@ -37,6 +37,10 @@ session_start();
  </div>
 
  <div>
+ <input type="text" required="required" name="CodE" class="id" placeholder="Code de l'entreprise" />
+ </div>
+
+ <div>
  <input type="text" required="required" name="DuKm" class="id" placeholder="Début du tronçon au km" />
  </div>
 

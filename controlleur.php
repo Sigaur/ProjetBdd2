@@ -147,11 +147,12 @@ require_once('db.php');
 
 
 
-function printTableRowTroncons($CodT, $CodA, $DuKm, $AuKm)
+function printTableRowTroncons($CodT, $CodA, $CodE, $DuKm, $AuKm)
 {
 	print("<tr>
 	    <td>$CodT</td>
 	    <td>$CodA</td> 
+	    <td>$CodE</td>
 	    <td>$DuKm</td>
 	    <td>$AuKm</td>
 		<td>
@@ -222,11 +223,12 @@ function printTableRowVilles($Nom, $CodP, $Libelle, $Numero)
 	  	);
 }
 
-function printTableRowPeages($Nom, $CodT, $PgDuKm, $PgAuKm, $Tarif)
+function printTableRowPeages($Nom, $CodT, $CodE, $PgDuKm, $PgAuKm, $Tarif)
 {
 	print("<tr>
 	    <td>$Nom</td>
 	    <td>$CodT</td>
+	    <td>$CodE</td>
 	    <td>$PgDuKm</td>
 	    <td>$PgAuKm</td>
 	    <td>$Tarif</td>
@@ -248,12 +250,11 @@ function printTableRowPeages($Nom, $CodT, $PgDuKm, $PgAuKm, $Tarif)
 	  	);
 }
 
-function printTableRowSca($CodE, $Nom, $NomPeage, $CA, $DateFin)
+function printTableRowSca($CodE, $Nom, $CA, $DateFin)
 {
 	print("<tr>
 	    <td>$CodE</td>
 	    <td>$Nom</td>
-	    <td>$NomPeage</td>
 	    <td>$CA</td>
 	    <td>$DateFin</td>
 		<td>
@@ -267,6 +268,13 @@ function printTableRowSca($CodE, $Nom, $NomPeage, $CA, $DateFin)
 	    	<form action='controlleur.php' method='post'>
 			<input type='hidden' name='sca' value='$CodE'>
 			<button type='Submit'>Supprimer
+			</button>
+			</form>
+		</td>
+		<td>
+	    	<form action='sca.php' method='post'>
+			<input type='hidden' name='sca' value='$CodE'>
+			<button type='Submit'>Afficher
 			</button>
 			</form>
 		</td>

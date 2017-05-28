@@ -1,4 +1,4 @@
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <link href="itinerairebis.css" rel="stylesheet"type="text/css">
 <link rel="shortcut icon" type="image/x-icon" href="Logo.png" />

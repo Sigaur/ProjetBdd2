@@ -19,7 +19,8 @@
 		<div class="milieu">
 			<table>
 	    	<th>Code Troncon</th>
-	    	<th>Code Autoroute</th> 
+	    	<th>Code Autoroute</th>
+	    	<th>Code Entreprise</th> 
 	    	<th>Debut du Troncon</th>	    
 	    	<th>Fin du Troncon</th>
 			<th>Modification</th>
@@ -34,7 +35,7 @@
 		$results_id = retrieve_troncons();
 		while ($row = $results_id->fetch_assoc())
 		{
-			printTableRowTroncons($row['CodT'], $row['CodA'], $row['DuKm'], $row['AuKm']);
+			printTableRowTroncons($row['CodT'], $row['CodA'], $row['CodE'], $row['DuKm'], $row['AuKm']);
 		}
 	?>
 	</table>
@@ -112,7 +113,8 @@
 	 <table>
 	  <tr>
 	    <th>Nom du Peage</th>
-	    <th>Code du Troncons</th> 
+	    <th>Code du Troncons</th>
+	    <th>Code Entreprise Propriétaire</th>  
 	    <th>Debut de la zone imposee</th>
 	    <th>Fin de la zone imposee</th>
 		<th>Tarif du Peage</th>
@@ -126,7 +128,7 @@
 		$results_id = retrieve_peages();
 		while ($row = $results_id->fetch_assoc())
 		{
-			printTableRowPeages($row['Nom'], $row['CodT'], $row['PgDuKm'], $row['PgAuKm'], $row['Tarif']);
+			printTableRowPeages($row['Nom'], $row['CodT'], $row['CodE'], $row['PgDuKm'], $row['PgAuKm'], $row['Tarif']);
 		}
 	?>
 	</table>
@@ -144,19 +146,19 @@
 	<table>
 	  <tr>
 	    <th>Code Entreprise</th>
-	    <th>Nom Entreprise</th> 
-	    <th>Nom Peage gere</th>
+	    <th>Nom Entreprise</th>
 	    <th>Chiffre d'affaire</th>
-		<th>Duree avant fin de contrat (jours)</th>
+		<th>Date de fin de contrat</th>
 		<th>Modification</th>
 		<th>Suppression</th>
+		<th>Affichage</th>
 	  </tr>	
 	
 	<?php
 		$results_id = retrieve_sca();
 		while ($row = $results_id->fetch_assoc())
 		{
-			printTableRowSca($row['CodE'], $row['Nom'], $row['NomPeage'], $row['CA'], $row['DateFin']);
+			printTableRowSca($row['CodE'], $row['Nom'], $row['CA'], $row['DateFin']);
 		}
 	?>
 	</table>
@@ -202,73 +204,72 @@
 	
 	<h2 class="titrecontenu">Options </h2>	
 	<div class="Stroll">	
-	<div class="sub">
-		<form action="interfaceItineraire.php" method="post">
-			<input type="submit" value="Nouvel itineraire">
-		</form>
-	</div>
-	<div class="instructions">
-		<p>Choisissez ce que vous voulez remettre a zero : </p>
-	
-	<div class= milieu>
-	<table>
-	<tr class= "options">
-	    <td>
-			<form action="controlleur.php" method="post">
-				<input type="hidden"  name="reset" value="database">
-				<input type="submit" value="Toute la base de donnees">
+		<div class="sub">
+			<form action="interfaceItineraire.php" method="post">
+				<input type="submit" value="Nouvel itineraire">
 			</form>
-		</td> 
-	    <td>
-			<form action="controlleur.php" method="post">
-				<input type="hidden"  name="reset" value="registre">
-			<input type="submit" value="Le registre">
+		</div>
+
+		<div class="instructions">
+			<p>Choisissez ce que vous voulez remettre a zero : </p>
+			
+			<div class= milieu>
+				<table>
+				<tr class= "options">
+				    <td>
+						<form action="controlleur.php" method="post">
+							<input type="hidden"  name="reset" value="database">
+							<input type="submit" value="Toute la base de donnees">
+						</form>
+					</td> 
+				    <td>
+						<form action="controlleur.php" method="post">
+							<input type="hidden"  name="reset" value="registre">
+						<input type="submit" value="Le registre">
+						</form>
+					</td>
+				    <td>
+						<form action="controlleur.php" method="post">
+							<input type="hidden"  name="reset" value="registre">
+							<input type="submit" value="Le registre">
+						</form>
+					</td>
+					<td>
+						<form action="controlleur.php" method="post">
+							<input type="hidden"  name="reset" value="sca">
+						<input type="submit" value="Tous Concessionnaires">
+						</form>
+					</td>
+				</tr>	
+				<tr>
+					<td>
+						<form action="controlleur.php" method="post">
+							<input type="hidden"  name="reset" value="sorties">
+							<input type="submit" value="Toutes les sorties">
+						</form>
+					</td>
+					<td>
+						<form action="controlleur.php" method="post">
+							<input type="hidden"  name="reset" value="troncons">
+							<input type="submit" value="Tous les troncons">
+						</form>
+					</td>
+					<td>
+						<form action="controlleur.php" method="post">
+							<input type="hidden"  name="reset" value="villes">
+							<input type="submit" value="Toutes les villes">
+						</form>
+					</td>
+				</tr>
+				
+				</table>
+			</div>
+		</div>
+		<div class="sub">
+			<form action="login.php" method="post">
+				<input type="submit" value="Login (WIP)">
 			</form>
-		</td>
-	    <td>
-			<form action="controlleur.php" method="post">
-				<input type="hidden"  name="reset" value="registre">
-				<input type="submit" value="Le registre">
-			</form>
-		</td>
-		<td>
-			<form action="controlleur.php" method="post">
-				<input type="hidden"  name="reset" value="sca">
-			<input type="submit" value="Tous Concessionnaires">
-			</form>
-		</td>
-	</tr>	
-	<tr>
-		<td>
-			<form action="controlleur.php" method="post">
-				<input type="hidden"  name="reset" value="sorties">
-				<input type="submit" value="Toutes les sorties">
-			</form>
-		</td>
-		<td>
-			<form action="controlleur.php" method="post">
-				<input type="hidden"  name="reset" value="troncons">
-				<input type="submit" value="Tous les troncons">
-			</form>
-		</td>
-		<td>
-			<form action="controlleur.php" method="post">
-				<input type="hidden"  name="reset" value="villes">
-				<input type="submit" value="Toutes les villes">
-			</form>
-		</td>
-	</tr>
-	
-	<?php
-		$results_id = retrieve_registre();
-		//while ($row = $results_id->fetch_assoc())
-		{
-			//printTableRowRegistre($row['CodT'], $row['IdRegistre'], $row['Descriptif'], $row['DateDebut'], $row['DateFin']);
-		}
-	?>
-	</table>
-	</div>
-	</div>
+		</div>
 	</div>
 
 </body>

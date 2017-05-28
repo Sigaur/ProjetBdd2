@@ -8,21 +8,23 @@ if (isset($_POST['update']))
 
 	$Nom = $_POST['Nom'];
 	$CodT = $_POST['CodT'];
+	$CodE = $_POST['CodE'];
 	$PgDuKm = $_POST['PgDuKm'];
 	$PgAuKm = $_POST['PgAuKm'];
 	$Tarif = $_POST['Tarif'];
 
-	query_database("UPDATE peages SET Nom = \"$Nom\", CodT = \"$CodT\", PgDuKm = $PgDuKm, PgAuKm = $PgAuKm, Tarif = $Tarif WHERE Nom = \"$temp\"");
+	query_database("UPDATE peages SET Nom = \"$Nom\", CodT = \"$CodT\", CodE = \"$CodE\", PgDuKm = $PgDuKm, PgAuKm = $PgAuKm, Tarif = $Tarif WHERE Nom = \"$temp\"");
 }
 else
 {
 	$Nom = $_POST['Nom'];
 	$CodT = $_POST['CodT'];
+	$CodE = $_POST['CodE'];
 	$PgDuKm = $_POST['PgDuKm'];
 	$PgAuKm = $_POST['PgAuKm'];
 	$Tarif = $_POST['Tarif'];
 
-	query_database("INSERT INTO peages VALUES(\"$Nom\",\"$CodT\", $PgDuKm, $PgAuKm, $Tarif)");
+	query_database("INSERT INTO peages VALUES(\"$Nom\",\"$CodT\", \"$CodE\", $PgDuKm, $PgAuKm, $Tarif)");
 }
 
 

@@ -27,6 +27,10 @@ session_start();
 					<div>
 						<input type=\"text\" required=\"required\" name=\"CodT\" class=\"id\" placeholder=\"Code du tronçon\" />
 					</div>
+
+					<div>
+						<input type=\"text\" required=\"required\" name=\"CodE\" class=\"id\" placeholder=\"Code Entreprise Propriétaire\" />
+					</div>
 					
 					<div>
 						<input type=\"text\" required=\"required\" name=\"PgDuKm\" class=\"id\" placeholder=\"Début de la zone imposée\" />
@@ -60,6 +64,10 @@ session_start();
 					 
 					<div>
 						<input type=\"text\" required=\"required\" name=\"CodT\" class=\"id\" placeholder=\"Code du tronçon\" />
+					</div>
+
+					<div>
+						<input type=\"text\" required=\"required\" name=\"CodE\" class=\"id\" placeholder=\"Code Entreprise Propriétaire\" />
 					</div>
 					
 					<div>

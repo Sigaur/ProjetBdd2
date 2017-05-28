@@ -33,10 +33,6 @@ session_start();
 <div>
  <input type="text" required="required" name="Nom" class="id" placeholder="Nom de l'entreprise" />
  </div>
- 
- <div>
- <input type="text" required="required" name="NomPeage" class="id" placeholder="Nom du péage géré" />
- </div>
 
  <div>
  <input type="text" required="required" name="CA" class="id" placeholder="Chiffre d'affaire" />
