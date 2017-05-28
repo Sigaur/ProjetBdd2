@@ -13,9 +13,19 @@ session_start();
 
 <body>
 
-
 <div class="Stroll">
-<h1 class="title"> Ajouter dans le registre</h1>
+<h1 class="title"> 
+	<?php
+	if (isset($_POST['update']))
+	{
+		print("Modifier Le registre");
+	}
+	else
+	{
+		print("Ajouter dans le registre");
+	}
+	?>
+</h1>
 <form action="RegistreInsert.php"method="post">
  
  <div>
@@ -39,9 +49,25 @@ session_start();
  </div>
  
   <div class="sub">
-        <input type="submit" value="Enregistrer" />
-		<input type="submit" value="Mettre à jour" />		
-  </div>
+        
+				
+
+
+<?php
+	if (isset($_POST['update']))
+	{
+		$temp = $_POST['update'];
+
+		print("<input type='hidden' name='update' value=$temp>
+			<input type=\"submit\" value=\"Mettre à jour\" />");
+	}
+	else
+	{
+		print("<input type=\"submit\" value=\"Ajouter\" />");
+	}
+?>
+
+</div>
 </form>
 
 </div>

@@ -206,7 +206,7 @@ function printTableRowVilles($Nom, $CodP, $Libelle, $Numero)
 	    <td>$Numero</td>
 	    <td>
 	    	<form action='AddVilles.php' method='post'>
-			<input type='hidden' name='update' value='$CodP'>
+			<input type='hidden' name='update' value='$Nom'>
 			<button type='Submit'>Modifier
 			</button>
 			</form>

@@ -16,7 +16,16 @@ session_start();
 
 
 <div class="Stroll">
-	<h1 class="title"> Ajouter une ville</h1>
+	<h1 class="title"> <?php
+	if (isset($_POST['update']))
+	{
+		print("Modifier La Ville");
+	}
+	else
+	{
+		print("Ajouter Une Ville");
+	}
+	?></h1>
 	<form action="VillesInsert.php"method="post">
 		<div>
 			<input type="text" required="required" name="Nom" class="id" placeholder="Nom de la ville" />
@@ -35,8 +44,19 @@ session_start();
 		</div>
 
 		<div class="sub">
-			<input type="submit" value="Enregistrer" />
-			<input type="submit" value="Mettre à jour" />
+			<?php
+	if (isset($_POST['update']))
+	{
+		$temp = $_POST['update'];
+
+		print("<input type='hidden' name='update' value=$temp>
+			<input type=\"submit\" value=\"Mettre à jour\" />");
+	}
+	else
+	{
+		print("<input type=\"submit\" value=\"Ajouter\" />");
+	}
+?>
 		</div>
 	</form>
 </div>

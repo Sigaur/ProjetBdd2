@@ -1,14 +1,31 @@
 <?php
 session_start();
-include("db.php"); 
+include("db.php");
 
-$Nom = $_POST['Nom'];
-$CodT = $_POST['CodT'];
-$PgDuKm = $_POST['PgDuKm'];
-$PgAuKm = $_POST['PgAuKm'];
-$Tarif = $_POST['Tarif'];
+if (isset($_POST['update']))
+{
+	$temp = $_POST['update'];
 
-query_database("INSERT INTO peages VALUES(\"$Nom\",\"$CodT\", $PgDuKm, $PgAuKm, $Tarif)");
+	$Nom = $_POST['Nom'];
+	$CodT = $_POST['CodT'];
+	$PgDuKm = $_POST['PgDuKm'];
+	$PgAuKm = $_POST['PgAuKm'];
+	$Tarif = $_POST['Tarif'];
+
+	query_database("UPDATE peages SET Nom = \"$Nom\", CodT = \"$CodT\", PgDuKm = $PgDuKm, PgAuKm = $PgAuKm, Tarif = $Tarif WHERE Nom = \"$temp\"");
+}
+else
+{
+	$Nom = $_POST['Nom'];
+	$CodT = $_POST['CodT'];
+	$PgDuKm = $_POST['PgDuKm'];
+	$PgAuKm = $_POST['PgAuKm'];
+	$Tarif = $_POST['Tarif'];
+
+	query_database("INSERT INTO peages VALUES(\"$Nom\",\"$CodT\", $PgDuKm, $PgAuKm, $Tarif)");
+}
+
+
 
 ?> 
 

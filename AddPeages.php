@@ -42,7 +42,6 @@ session_start();
 						
 					<div class=\"sub\">
 						<input type='hidden' name='update' value='$temp'>
-						<input type=\"submit\" value=\"Enregistrer\" />
 						<input type=\"submit\" value=\"Mettre à jour\" />
 
 			
@@ -76,8 +75,7 @@ session_start();
 					</div>
 						
 					<div class=\"sub\">
-						<input type=\"submit\" value=\"Enregistrer\" />
-						<input type=\"submit\" value=\"Mettre à jour\" />		
+						<input type=\"submit\" value=\"Enregistrer\" />	
 					</div>
 				</form>
 			</div>");
