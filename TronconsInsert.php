@@ -15,6 +15,11 @@ if (isset($_POST['update']))
 
 	query_database("UPDATE troncons SET CodT = \"$CodT\", CodA = \"$CodA\", CodE = \"$CodE\", DuKm = $DuKm, AuKm = $AuKm WHERE CodT = \"$temp\"");
 
+	print("<script text=\"text/javascript\"> 
+alert(\"Troncon modifié !\"); 
+window.location.replace(\"index.php\"); 
+</script>");
+
 }
 else
 {
@@ -25,11 +30,13 @@ else
 	$AuKm = $_POST['AuKm'];
 
 	query_database("INSERT INTO troncons VALUES(\"$CodT\", \"$CodA\", \"$CodE\", $DuKm, $AuKm)");
+
+	print("<script text=\"text/javascript\"> 
+alert(\"Troncon ajouté !\"); 
+window.location.replace(\"index.php\"); 
+</script>");
+	
 }
 
 
 ?> 
-<script text="text/javascript"> 
-alert("troncon ajoute !"); 
-window.location.replace("index.php"); 
-</script>

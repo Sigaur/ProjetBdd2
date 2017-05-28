@@ -14,6 +14,11 @@ if (isset($_POST['update']))
 	$Tarif = $_POST['Tarif'];
 
 	query_database("UPDATE peages SET Nom = \"$Nom\", CodT = \"$CodT\", CodE = \"$CodE\", PgDuKm = $PgDuKm, PgAuKm = $PgAuKm, Tarif = $Tarif WHERE Nom = \"$temp\"");
+
+	print("<script text=\"text/javascript\"> 
+alert(\"Péage ajouté !\"); 
+window.location.replace(\"index.php\"); 
+</script>");
 }
 else
 {
@@ -25,14 +30,13 @@ else
 	$Tarif = $_POST['Tarif'];
 
 	query_database("INSERT INTO peages VALUES(\"$Nom\",\"$CodT\", \"$CodE\", $PgDuKm, $PgAuKm, $Tarif)");
+
+	print("<script text=\"text/javascript\"> 
+alert(\"Péage modifié !\"); 
+window.location.replace(\"index.php\"); 
+</script>");
 }
 
 
 
 ?> 
-
-<script text="text/javascript"> 
-alert("Péage ajouté !"); 
-window.location.replace("index.php");
-
-</script>

@@ -13,6 +13,10 @@ if (isset($_POST['update']))
 	print("trace");
 
 	query_database("UPDATE sorties SET CodT = \"$CodT\", Libelle = \"$Libelle\", Numero = $Numero, Km = $Km WHERE Libelle = \"$temp\"");
+	print("<script text=\"text/javascript\"> 
+alert(\"Sortie modifiée !\"); 
+window.location.replace(\"index.php\"); 
+</script>");
 }
 else
 {
@@ -22,12 +26,10 @@ else
 	$Km = $_POST['Km'];
 
 	query_database("INSERT INTO sorties VALUES(\"$CodT\",\"$Libelle\", $Numero, $Km)");
+	print("<script text=\"text/javascript\"> 
+alert(\"Sortie ajoutée !\"); 
+window.location.replace(\"index.php\"); 
+</script>");
 }
 
 ?> 
-
-<script text="text/javascript"> 
-alert("Sortie ajoutee !"); 
-window.location.replace("index.php");
-
-</script>
