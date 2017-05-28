@@ -32,8 +32,8 @@
 	$results_id = query_database("SELECT DateFin FROM sca WHERE CodE = \"$CodE\"");
 	
 	$row = $results_id->fetch_assoc();
-	$nom = $row['DateFin'];
-	print("Date de fin de contrat : $nom <br>");
+	$date = $row['DateFin'];
+	print("Date de fin de contrat : $date <br>");
 	
 
 	$results_id = query_database("SELECT CodT FROM troncons WHERE CodE = \"$CodE\"");
