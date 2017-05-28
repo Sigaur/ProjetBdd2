@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="fr">
 <link href="view.css" rel="stylesheet"type="text/css">
-
+<link rel="shortcut icon" type="image/x-icon" href="Logo.png" />
 <body>
 <h1 class="title">Gestion Autoroute</h1>
 	<div class="bandeau">
 		<h6 class="title2">Affichage</h6>
 	</div>
 
-	<h2 class="titrecontenu"> Tronçons </h2>	
+	<h2 class="titrecontenu"> Troncons </h2>	
 	<div class="Stroll">
-		<div class="milieu">
+		
+		<div class="sub">
 		<form action="AddTroncons.php" method="post">
-			<input type="submit" value="ajouter">
+			<input type="submit" value="Ajouter">
 		</form>
-			<table class="c3">
-	    	<th>Code Tronçon</th>
+		</div>
+		<div class="milieu">
+			<table>
+	    	<th>Code Troncon</th>
 	    	<th>Code Autoroute</th> 
-	    	<th>Début du Tronçon</th>	    
-	    	<th>Fin du Tronçon</th>
-	    	<th>   </th>
+	    	<th>Debut du Troncon</th>	    
+	    	<th>Fin du Troncon</th>
+			<th>Modification</th>
+			<th>Suppression</th>
 	  		</tr>
 		
 
@@ -39,17 +43,19 @@
 	<br><br>
 	<h3 class="titrecontenu"> Sorties </h3>	
 	<div class="Stroll">
-	<div class="milieu">
+	<div class="sub">
 			<form action="AddSorties.php" method="post">
-				<input type="submit" value="ajouter">
+				<input type="submit" value="Ajouter">
 			</form>	
-			
-	<table class="c3">
+	</div>
+	<div class="milieu">
+	<table>
 	  <tr>
-	    <th>Code Tronçon</th>
+	    <th>Code Troncon</th>
 	    <th>Nom de la sortie</th> 
-	    <th>Numéro de la Sortie</th>
-	    <th>   </th>
+	    <th>Numero de la Sortie</th>
+		<th>Modification</th>
+	    <th>Suppression</th>
 	  </tr>	
 		
 
@@ -67,17 +73,20 @@
 	<br><br>
 	<h2 class="titrecontenu"> Villes </h2>	
 	<div class="Stroll">
-		<div class="milieu">
+	<div class="sub">
 	<form action="AddVilles.php" method="post">
-				<input type="submit" value="ajouter">
+				<input type="submit" value="Ajouter">
 			</form>
-	<table class="c3">
+	</div>
+	<div class="milieu">
+	<table>
 	  <tr>
 	    <th>Nom de la ville</th>
 	    <th>Code Postale de la Ville</th> 
 	    <th>Nom de la sortie</th>
-	    <th>Numéro de la sortie</th>
-	    <th>   </th>
+	    <th>Numero de la sortie</th>
+		<th>Modification</th>
+		<th>Suppression</th>
 	  </tr>	
 		
 	
@@ -92,21 +101,23 @@
 	</div>	
 	</div>
 	<br><br>
-	<h2 class="titrecontenu">Péages </h2>	
+	<h2 class="titrecontenu">Peages </h2>	
 	<div class="Stroll">
-		<div class="milieu">
+	<div class="sub">
 		<form action="AddPeages.php" method="post">
-				<input type="submit" value="ajouter">
-			</form>
-			
-	 <table class="c3">
+		<input type="submit" value="Ajouter">
+		</form>
+	</div>
+	<div class="milieu">
+	 <table>
 	  <tr>
-	    <th>Nom du Péage</th>
-	    <th>Code du Tronçons</th> 
-	    <th>Début de la zone imposée</th>
-	    <th>Fin de la zone imposée</th>
-		<th>Tarif du Péage</th>
-		<th>   </th>
+	    <th>Nom du Peage</th>
+	    <th>Code du Troncons</th> 
+	    <th>Debut de la zone imposee</th>
+	    <th>Fin de la zone imposee</th>
+		<th>Tarif du Peage</th>
+		<th>Modification</th>
+		<th>Suppression</th>
 	  </tr>	
 		
 	
@@ -115,29 +126,31 @@
 		$results_id = retrieve_peages();
 		while ($row = $results_id->fetch_assoc())
 		{
-			printTableRowVilles($row['Nom'], $row['CodT'], $row['PgDuKm'], $row['PgAuKm'], $row['Tarif']);
+			printTableRowPeages($row['Nom'], $row['CodT'], $row['PgDuKm'], $row['PgAuKm'], $row['Tarif']);
 		}
 	?>
 	</table>
 	</div>	
-		</div>
+</div>
 	<br><br>
 <h2 class="titrecontenu">SCA </h2>	
 	<div class="Stroll">
-		<div class="milieu">
+	<div class="sub">
 	<form action="AddSca.php" method="post">
-				<input type="submit" value="ajouter">
+				<input type="submit" value="Ajouter">
 			</form>
-	<table class="c3">
+		</div>
+	<div class="milieu">
+	<table>
 	  <tr>
 	    <th>Code Entreprise</th>
 	    <th>Nom Entreprise</th> 
-	    <th>Nom Peage géré</th>
+	    <th>Nom Peage gere</th>
 	    <th>Chiffre d'affaire</th>
-		<th>Durée avant fin de contrat (jours)</th>
-		<th>   </th>
+		<th>Duree avant fin de contrat (jours)</th>
+		<th>Modification</th>
+		<th>Suppression</th>
 	  </tr>	
-		
 	
 	<?php
 		$results_id = retrieve_sca();
@@ -152,18 +165,22 @@
 	<br><br>
 <h2 class="titrecontenu">Registre Fermetures </h2>	
 	<div class="Stroll">
-		<div class="milieu">
-	<form action="AddRegistre.php" method="post">
-				<input type="submit" value="ajouter">
+		
+	<div class="sub">
+			<form action="AddRegistre.php" method="post">
+				<input type="submit" value="Ajouter">
 			</form>
-	<table class="c3">
+	</div>
+	<div class="milieu">
+	<table>
 	  <tr>
 	    <th>Code Troncons</th>
 	    <th>ID Registre</th> 
 	    <th>Descriptif de la fermeture</th>
 	    <th>Date Debut</th>
 		<th>Date Fin</th>
-		<th>   </th>
+		<th>Modification</th>
+		<th>Suppression</th>
 	  </tr>	
 		
 	
@@ -184,22 +201,22 @@
 	
 	
 	<h2 class="titrecontenu">Options </h2>	
-	<div class="Stroll">
-		<div class="milieu">
-
-	
+	<div class="Stroll">	
+	<div class="sub">
 		<form action="interfaceItineraire.php" method="post">
-			<input type="submit" value="nouvel itineraire">
+			<input type="submit" value="Nouvel itineraire">
 		</form>
-<br>
+	</div>
+	<div class="instructions">
+		<p>Choisissez ce que vous voulez remettre a zero : </p>
 	
+	<div class= milieu>
 	<table>
-	<tr><td>Choisissez ce que vous voulez remettre à zéro :</td></tr>
-	<tr>
+	<tr class= "options">
 	    <td>
 			<form action="controlleur.php" method="post">
 				<input type="hidden"  name="reset" value="database">
-				<input type="submit" value="Toute la base de données">
+				<input type="submit" value="Toute la base de donnees">
 			</form>
 		</td> 
 	    <td>
@@ -217,7 +234,7 @@
 		<td>
 			<form action="controlleur.php" method="post">
 				<input type="hidden"  name="reset" value="sca">
-			<input type="submit" value="Toutes les Sociétées Concessionnaires d'Autoroutes">
+			<input type="submit" value="Tous Concessionnaires">
 			</form>
 		</td>
 	</tr>	
@@ -231,7 +248,7 @@
 		<td>
 			<form action="controlleur.php" method="post">
 				<input type="hidden"  name="reset" value="troncons">
-				<input type="submit" value="Tous les tronçons">
+				<input type="submit" value="Tous les troncons">
 			</form>
 		</td>
 		<td>
@@ -250,7 +267,8 @@
 		}
 	?>
 	</table>
-	</div>	
+	</div>
+	</div>
 	</div>
 
 </body>
